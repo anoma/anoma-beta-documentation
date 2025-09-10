@@ -10,27 +10,6 @@ The Hello World application showcases how to:
 - Build zero-knowledge logic proofs using RISC0
 - Construct and verify transactions
 
-## Architecture
-
-The project is organized into several crates:
-
-- `hello_world_app`: Main application that creates transactions and demonstrates the flow
-- `hello_world_library`: Contains the logic circuit implementation and proof generation
-- `hello_world_witness`: Defines the witness structure for zero-knowledge proofs
-
-## Key Components
-
-### Resource Logic
-Resources contain a "Hello World" label that is validated through zero-knowledge proofs. The application demonstrates the transformation of an ephemeral resource into a persistent one while maintaining cryptographic integrity.
-
-### Transaction Flow
-1. Generate nullifier keys for resource identification
-2. Create an ephemeral "Hello World" resource
-3. Create a persistent "Hello World" resource
-4. Generate compliance proofs for the resource transition
-5. Create logic proofs using zero-knowledge circuits
-6. Build and verify the complete transaction
-
 ## Running the Application
 
 To run the hello world example:
@@ -48,3 +27,11 @@ The project uses Rust and requires the RISC0 toolchain for zero-knowledge proof 
 ```shell
 cargo build
 ```
+
+## Architecture
+
+The project is organized into several crates:
+
+- `hello_world_app`: Main application that creates transactions and demonstrates the flow
+- `hello_world_library`: Contains the logic circuit implementation and proof generation
+- `hello_world_witness`: Defines the witness structure for zero-knowledge proofs
