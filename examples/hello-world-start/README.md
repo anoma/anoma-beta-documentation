@@ -1,6 +1,6 @@
 # Hello World
 
-This repository contains a simple example of an Anoma application demonstrating the basic concepts of resource creation, transaction construction, and zero-knowledge proof generation. It should be used as the starting point for following [Anoma's Hello World tutorial]https://docs.anoma.net/build/your-first-anoma-application). Thus, proofs will not work unless following the tutorial.
+This repository contains a simple example of an Anoma application demonstrating the basic concepts of resource creation, transaction construction, and zero-knowledge proof generation. It should be used as the starting point for following [Anoma's Hello World tutorial](https://docs.anoma.net/build/your-first-anoma-application). Thus, proofs will not work unless following the tutorial.
 
 ## Overview
 
