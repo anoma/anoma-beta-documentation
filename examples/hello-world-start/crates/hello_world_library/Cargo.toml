@@ -1,0 +1,17 @@
+[package]
+name = "hello_world_library"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+risc0-zkvm = "3.0.3"
+arm = { git = "https://github.com/anoma/arm-risc0", branch = "m1dnight/encoders-decoders-new-structs", default-features = true }
+hello_world_witness = { path = "../hello_world_witness"}
+serde = { version = "1.0.219", features = ["derive"] }
+lazy_static = "1.5.0"
+hex = "0.4"
+rustler = {version = "0.36.2", optional = true}
+rand = "0.8"
+
+[features]
+default = []
