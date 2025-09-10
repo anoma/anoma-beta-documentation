@@ -7,6 +7,21 @@ use arm::nullifier_key::NullifierKey;
 use arm::resource::Resource;
 use hello_world_library::HelloWorldLogic;
 
+pub fn convert_hello_world_to_value_ref(value: u128) -> Vec<u8> {
+    let mut arr = [0u8; 32];
+    let bytes = value.to_le_bytes();
+    arr[..16].copy_from_slice(&bytes); // left-align, right-pad with 0
+    arr.to_vec()
+}
+
+pub fn convert_text_to_label_ref(text: &str) -> Vec<u8> {
+    let mut label_ref = [0u8; 32];
+    let text_bytes = text.as_bytes();
+    let copy_len = text_bytes.len().min(32); // Ensure we don't exceed 32 bytes
+    label_ref[..copy_len].copy_from_slice(&text_bytes[..copy_len]);
+    label_ref.to_vec()
+}
+
 pub fn generate_compliance_proof(
     consumed_hello_world: Resource,
     nf_key: NullifierKey,
