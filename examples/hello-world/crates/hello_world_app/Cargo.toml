@@ -1,0 +1,18 @@
+[package]
+name = "hello_world_app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+hello_world_library = { path = "../hello_world_library"}
+hello_world_witness = { path = "../hello_world_witness" }
+
+arm = { git = "https://github.com/anoma/arm-risc0", branch = "jurevans/patch-keys-0.6.1",  default-features = false, features = ["transaction", "bonsai", "groth16_prover"] }
+evm_protocol_adapter_bindings = { git = "https://github.com/anoma/evm-protocol-adapter", branch = "feature/sepolia-demo"}
+risc0-zkvm = { version = "3.0.3", default-features = false, features = ["std", "unstable"] }
+
+hex = "0.4"
+lazy_static = "1.5.0"
+rand = "0.8"
+serde = "1.0"
+tokio = "1.47.1"

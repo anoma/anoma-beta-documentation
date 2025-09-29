@@ -1,0 +1,8 @@
+[package]
+name = "hello_world_logic_circuit"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+risc0-zkvm = "3.0.3"
+hello_world_methods = { path = "hello_world_methods" }

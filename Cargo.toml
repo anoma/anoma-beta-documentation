@@ -1,7 +1,11 @@
 [workspace]
 resolver = "2"
 
-members = [ "crates/hello_world_app"]
+members = [
+    "examples/counter/crates/counter_app",
+    "examples/hello-world/crates/hello_world_app",
+]
+exclude = ["native"]
 
 # Always optimize; building and running the guest takes much longer without optimization.
 [profile.dev]
