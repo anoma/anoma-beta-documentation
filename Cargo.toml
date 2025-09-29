@@ -2,7 +2,7 @@
 resolver = "2"
 
 members = [
-    "examples/counter/crates/counter_app",
+    # "examples/counter/crates/counter_app",
     "examples/hello-world/crates/hello_world_app",
 ]
 exclude = ["native"]

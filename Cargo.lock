@@ -1320,26 +1320,6 @@ dependencies = [
 
 [[package]]
 name = "arm"
-version = "0.4.0"
-source = "git+https://github.com/anoma/arm-risc0?branch=m1dnight%2Fencoders-decoders-new-structs#c303dd23d123e9c09c752c05689678e4eb210606"
-dependencies = [
- "aes-gcm",
- "alloy-primitives",
- "alloy-sol-types",
- "bincode",
- "bytemuck",
- "hex",
- "k256",
- "lazy_static",
- "rand 0.8.5",
- "risc0-zkvm",
- "rustler",
- "serde",
- "sha3",
-]
-
-[[package]]
-name = "arm"
 version = "0.6.1"
 source = "git+https://github.com/anoma/arm-risc0?branch=jurevans%2Fpatch-keys-0.6.1#af43e5d659d3b5e0651c481b4aad137e8451ec44"
 dependencies = [
@@ -2237,47 +2217,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "counter_app"
-version = "0.1.0"
-dependencies = [
- "arm 0.4.0",
- "counter_library",
- "counter_witness",
- "evm_protocol_adapter_bindings 0.1.0",
- "hex",
- "lazy_static",
- "rand 0.8.5",
- "risc0-zkvm",
- "serde",
- "tokio",
-]
-
-[[package]]
-name = "counter_library"
-version = "0.1.0"
-dependencies = [
- "arm 0.4.0",
- "counter_witness",
- "hex",
- "lazy_static",
- "rand 0.8.5",
- "risc0-zkvm",
- "rustler",
- "serde",
-]
-
-[[package]]
-name = "counter_witness"
-version = "0.1.0"
-dependencies = [
- "arm 0.4.0",
- "bincode",
- "rand 0.8.5",
- "rustler",
- "serde",
-]
-
-[[package]]
 name = "cpp_demangle"
 version = "0.4.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2649,12 +2588,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "aac81fa3e28d21450aa4d2ac065992ba96a1d7303efbce51a95f4fd175b67562"
 
 [[package]]
-name = "dotenv"
-version = "0.15.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "77c90badedccf4105eca100756a0b1289e191f6fcbdadd3cee1d2f614f97da8f"
-
-[[package]]
 name = "downcast-rs"
 version = "1.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2850,23 +2783,11 @@ dependencies = [
 
 [[package]]
 name = "evm_protocol_adapter_bindings"
-version = "0.1.0"
-source = "git+https://github.com/anoma/evm-protocol-adapter?branch=feature%2Fcrate#038e7b9017a0ab223a39485d2089c3be65dd2f5e"
-dependencies = [
- "alloy",
- "arm 0.4.0",
- "dotenv",
- "serde",
- "tokio",
-]
-
-[[package]]
-name = "evm_protocol_adapter_bindings"
 version = "1.0.0-beta"
 source = "git+https://github.com/anoma/evm-protocol-adapter?branch=feature%2Fsepolia-demo#37ab3820f8b381e4033a4e3aead84bb97ee27724"
 dependencies = [
  "alloy",
- "arm 0.6.1",
+ "arm",
  "serde",
  "sha2",
  "simple-transfer-app",
@@ -3349,8 +3270,8 @@ checksum = "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea"
 name = "hello_world_app"
 version = "0.1.0"
 dependencies = [
- "arm 0.6.1",
- "evm_protocol_adapter_bindings 1.0.0-beta",
+ "arm",
+ "evm_protocol_adapter_bindings",
  "hello_world_library",
  "hello_world_witness",
  "hex",
@@ -3365,7 +3286,7 @@ dependencies = [
 name = "hello_world_library"
 version = "0.1.0"
 dependencies = [
- "arm 0.6.1",
+ "arm",
  "hello_world_witness",
  "hex",
  "lazy_static",
@@ -3379,7 +3300,7 @@ dependencies = [
 name = "hello_world_witness"
 version = "0.1.0"
 dependencies = [
- "arm 0.6.1",
+ "arm",
  "bincode",
  "rand 0.8.5",
  "serde",
@@ -6183,7 +6104,7 @@ name = "simple-transfer-app"
 version = "0.1.0"
 source = "git+https://github.com/anoma/arm-risc0?branch=jurevans%2Fpatch-keys-0.6.1#af43e5d659d3b5e0651c481b4aad137e8451ec44"
 dependencies = [
- "arm 0.6.1",
+ "arm",
  "hex",
  "lazy_static",
  "rand 0.8.5",
@@ -6197,7 +6118,7 @@ name = "simple-transfer-witness"
 version = "0.1.0"
 source = "git+https://github.com/anoma/arm-risc0?branch=jurevans%2Fpatch-keys-0.6.1#af43e5d659d3b5e0651c481b4aad137e8451ec44"
 dependencies = [
- "arm 0.6.1",
+ "arm",
  "rand 0.8.5",
  "serde",
 ]
