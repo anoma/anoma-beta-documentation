@@ -29,7 +29,7 @@ use hello_world_library::HelloWorldLogic;
 /// 
 /// A tuple containing:
 /// * `ComplianceUnit` - The compliance proof unit
-/// * `Vec<u8>` - The RCV (Resource Commitment Vector) bytes
+/// * `Vec<u8>` - The RCV (Random Commitment Value) bytes
 /// 
 /// # Panics
 /// 
