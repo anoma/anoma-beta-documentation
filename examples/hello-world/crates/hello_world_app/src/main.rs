@@ -5,8 +5,7 @@
 //! and one persistentresource, generates logic and compliance
 //! proofs, and creates a verifiable transaction.
 
-use crate::init::{generate_ephemeral_resource, generate_persistent_resource};
-use crate::util::{generate_compliance_proof, generate_logic_proofs};
+use crate::utils::{generate_ephemeral_resource, generate_persistent_resource, generate_compliance_proof, generate_logic_proofs};
 
 use arm::action::Action;
 use arm::delta_proof::DeltaWitness;
@@ -14,8 +13,7 @@ use arm::merkle_path::MerklePath;
 use arm::nullifier_key::NullifierKey;
 use arm::transaction::{Delta, Transaction};
 
-mod init;
-mod util;
+mod utils;
 
 /// Creates and verifies a complete hello world transaction.
 /// 
